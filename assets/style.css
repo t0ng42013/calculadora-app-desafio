@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  
+}
+*::selection{
+     background: transparent;
+}
+:root {
+  --bg-tone: #3b4664;
+}
+
+body {
+  background-color: #3b4664;
+}
+
+.calc__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 45%;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.calc__title {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 16px;
+  font-size: 50px;
+  color: #eb725d;
+}
+
+.calc__custom {
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.custom__name {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.custom__theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+
+.custom__text {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.custom__btn {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.btn__number {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn__bar {
+  width: 100%;
+  height: 16px;
+  border-radius: 12px;
+  background-color: #252c46;
+  position: relative;
+  padding: 4px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.btn__bar::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 80%;
+  background-color: #eb725d;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calc__display {
+  width: 100%;
+  background: #181f32;
+  color: white;
+  text-align: end;
+  border-radius: 12px;
+  font-size: 45px;
+  font-weight: 900;
+  padding: 30px;
+}
+
+.calc__btns {
+  width: 100%;
+  background-color: #252c46;
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 25px;
+  margin-bottom: 16px;
+}
+
+.calc__btns div {
+  background-color: #eae3db;
+  color: #181f32;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+
+  box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
+  -webkit-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
+  -moz-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
+}
+
+
+.calc__btns div:active {
+  position: relative;
+  bottom: -2px;
+  filter: brightness(2);
+  box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
+  -webkit-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
+  -moz-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
+}
+
+div > .btndel,
+div > .btnres {
+  background: #3b4664;
+  text-transform: uppercase;
+  color: #eae3db;
+}
+div > .btncalc {
+  background: #f96c5b;
+  color: #eae3db;
+  width: 100%;
+  grid-column: span 2;
+}
+
+div > .btnres,
+div > .btncalc {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.calc__foot{
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.calc__foot img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+      
+}
