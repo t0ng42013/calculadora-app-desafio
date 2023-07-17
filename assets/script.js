@@ -5,6 +5,7 @@ let resultado = "";
 
 let btns = document.querySelectorAll('.btn');
 
+
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let btnText = btn.textContent;
@@ -20,17 +21,21 @@ btns.forEach((btn) => {
     }
 
     if (esOperador(btnText)) {
-      guardarOperador(btnText);
+      if (!operador) {
+        operador = btnText;
+        mostrarEnPantalla();
+      } else {
+        calcularResultado();
+        operador = btnText;
+        num1 = resultado;
+        num2 = "";
+        mostrarEnPantalla();
+      }
     }
 
     if (btnText === "=") {
       calcularResultado();
       mostrarResultadoEnPantalla();
-    }
-
-    if(btnText == 'Reset'){
-        resetearCalculadora();
-        return;
     }
   });
 });
