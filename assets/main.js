@@ -59,7 +59,7 @@ btns.forEach((btn) => {
       calcularResultado(num1, operador);
     }
 
-    if (btn.textContent == "Reset") {
+    if (btn.textContent == "Reset" || btn.textContent.toLocaleLowerCase == "reiniciar") {
       resetearCalculadora();
     }
   });
