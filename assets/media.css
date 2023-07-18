@@ -1,0 +1,17 @@
+@media (max-width: 420px) {
+.calc__custom { 
+  min-width: 300px;
+}
+
+.calc__display {
+  min-width: 300px;
+}
+.calc__btns {
+  min-width: 300px;
+  gap: 20px;
+}
+.calc__btns div {
+font-size: 16px;
+padding: 18px;
+}
+}
