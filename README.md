@@ -9,7 +9,6 @@ Mi calculadora tiene las siguientes características:
     Los elementos se ajustan automáticamente según el tamaño de pantalla del dispositivo.
     Permite realizar operaciones matemáticas como suma, resta, multiplicación y división.
     Permite ajustar el tema de color según la preferencia del usuario.
-    Bonus: Verifica la preferencia de tema inicial del usuario utilizando prefers-color-scheme y guarda cualquier cambio adicional en el navegador.
 
 Demo
 
