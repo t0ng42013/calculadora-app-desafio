@@ -27,7 +27,6 @@ btns.forEach((btn) => {
 
       mostrarEnPantalla(btn.textContent);
       bandera = true;
-      console.log(btn.textContent, num1, bandera, "ss");
     }
 
     // Ingreso de operadores
@@ -49,7 +48,6 @@ btns.forEach((btn) => {
         display.textContent != "X" &&
         display.textContent !== "/"
       ) {
-        console.log(display.textContent, "ssssss");
         num1 = parseFloat(display.textContent);
       }
       bandera = false;
@@ -84,19 +82,6 @@ function mostrarEnPantalla(valor) {
   display.textContent += valor;
 }
 
-function operadores(operador) {
-  console.log("operador");
-  if (
-    valor.textContent === "+" ||
-    valor.textContent === "-" ||
-    valor.textContent === "X" ||
-    valor.textContent === "/"
-  ) {
-    console.log("first");
-    operadores(valor);
-  }
-}
-
 function calcularResultado(num1, operador) {
   num2 = parseFloat(display.textContent);
 
@@ -111,20 +96,24 @@ function calcularResultado(num1, operador) {
       resultado = num1 - parseFloat(display.textContent);
       display.textContent = resultado;
       bandera = false;
+      bandera3 = true;
       break;
     case "X":
       resultado = num1 * parseFloat(display.textContent);
       display.textContent = resultado;
       bandera = false;
+      bandera3 = true;
       break;
     case "/":
       resultado = num1 / parseFloat(display.textContent);
       display.textContent = resultado;
       bandera = false;
+      bandera3 = true;
       break;
 
     default:
       display.textContent = "ERROR";
+      bandera3 = true;
       break;
   }
 }

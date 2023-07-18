@@ -10,12 +10,54 @@
 *::selection{
      background: transparent;
 }
-:root {
-  --bg-tone: #3b4664;
+:root {  
+  --bg-body-t1:#3b4664;
+  --color-t1: #fff;
+  --bg-btn-t1: #252c46;
+  --bg-display-t1: #181f32;
+  --bg-btnGrup-t1:#eae3db;
+  --bg-colorG-t1:#3b4664;
+  --bg--btnGrupRest-t1: #647299;
+  --bg--btnGrupCalc-t1: #d13f30;
+  --bg-btnGrupHover-t1: #fffeff;
+  --bg--btnHoverRes-t1: #a5aee7;
+  --bg--btnHoverCalc-t1: #f96c5b;
+  --box-shadow-t1: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
+  --box-shadowa-t1: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
+
+  --bg-body-t2:#e6e6e6;
+  --color-t2: #32322a;
+  --bg-btn-t2: #d3cdcd;
+  --bg-display-t2: #eeeeee;
+  --bg-btnGrup-t2:#e5e4e0;
+  --bg-colorG-t2:#32322a;
+  --bg--btnGrupRest-t2: #62b5bd;
+  --bg--btnGrupCalc-t2: #ff8b38;
+  --bg-btnGrupHover-t2: #f96c5b;
+  --bg--btnHoverRes-t2: #62b5bd;
+  --bg--btnHoverCalc-t2: #ff8b38;
+   --box-shadow-t1: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
+  --box-shadowa-t1: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
+  
+  --bg-body-t3:#17062a;
+  --color-t3: #fff831;
+  --bg-btn-t3: #1e0836;
+  --bg-display-t3: #1e0836;
+  --bg-btnGrup-t3:#331b4d;
+  --bg-colorG-t3:#fff831;
+  --bg--btnGrupRest-t3: #56077c;
+  --bg--btnGrupCalc-t3: #00decf;
+  --bg-btnGrupHover-t3: #6b34ac;
+  --bg--btnHoverRes-t3: #8631b0;
+  --bg--btnHoverCalc-t3: #94fff9;
+   --box-shadow-t3: 0px -3px 1px 1px rgba(134, 27, 159) inset;
+  --box-shadowa-t3: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
+
+
 }
 
 body {
-  background-color: #3b4664;
+  background-color: var(--bg-body-t1);
 }
 
 .calc__container {
@@ -39,11 +81,12 @@ body {
 
 .calc__custom {
   width: 100%;
+  min-width: 400px;
   padding: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: var(--color-t1);
 }
 
 .custom__name {
@@ -55,7 +98,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 25%;
+  width: 140px;
 }
 
 .custom__text {
@@ -82,12 +125,13 @@ body {
   width: 100%;
   height: 16px;
   border-radius: 12px;
-  background-color: #252c46;
   position: relative;
   padding: 4px;
   display: flex;
   justify-content: start;
   align-items: center;
+  cursor: pointer;
+  background-color: var(--bg-btn-t1);
 }
 
 .btn__bar::after {
@@ -95,25 +139,25 @@ body {
   position: absolute;
   width: 12px;
   height: 80%;
-  background-color: #eb725d;
   border-radius: 50%;
-  cursor: pointer;
+  background-color: #eb725d;
 }
 
 .calc__display {
   width: 100%;
-  background: #181f32;
-  color: white;
+  min-width: 400px;
   text-align: end;
   border-radius: 12px;
   font-size: 45px;
   font-weight: 900;
   padding: 30px;
+  color: var(--color-t1);
+  background: var(--bg-display-t1);
 }
 
 .calc__btns {
   width: 100%;
-  background-color: #252c46;
+  min-width: 400px;
   border-radius: 12px;
   padding: 20px;
   display: grid;
@@ -121,11 +165,10 @@ body {
   place-items: center;
   gap: 25px;
   margin-bottom: 16px;
+  background-color: var(--bg-btn-t1);
 }
 
 .calc__btns div {
-  background-color: #eae3db;
-  color: #181f32;
   width: 100%;
   font-size: 25px;
   font-weight: 900;
@@ -133,33 +176,34 @@ body {
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
-
-  box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
-  -webkit-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
-  -moz-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.4) inset;
+  background-color: var(--bg-btnGrup-t1);
+  color: var(--bg-colorG-t1);
+  
+  box-shadow: var(--box-shadow-t1);
+  -webkit-box-shadow: var(--box-shadow-t1);
+  -moz-box-shadow: var(--box-shadow-t1);
 }
-
 
 .calc__btns div:active {
   position: relative;
   bottom: -2px;
   filter: brightness(2);
-  box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
-  -webkit-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
-  -moz-box-shadow: 0px -3px 1px 1px rgba(0, 0, 0, 0.7) inset;
+  box-shadow: var(--box-shadowa-t1);
+  -webkit-box-shadow: var(--box-shadowa-t1);
+  -moz-box-shadow: var(--box-shadowa-t1);
 }
 
 div > .btndel,
 div > .btnres {
-  background: #3b4664;
   text-transform: uppercase;
-  color: #eae3db;
+  color: var(--color-t1);
+  background: var(--bg--btnGrupRest-t1);
 }
 div > .btncalc {
-  background: #f96c5b;
-  color: #eae3db;
   width: 100%;
   grid-column: span 2;
+  color: var(--color-t1);
+  background: var(--bg--btnGrupCalc-t1);
 }
 
 div > .btnres,
