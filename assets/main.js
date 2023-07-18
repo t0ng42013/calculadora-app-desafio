@@ -8,6 +8,8 @@ let bandera3 = false;
 
 let btns = document.querySelectorAll(".btn");
 let display = document.getElementById("display");
+let res = document.querySelector(".btnres");
+let del = document.querySelector(".btndel");
 
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -59,10 +61,19 @@ btns.forEach((btn) => {
       calcularResultado(num1, operador);
     }
 
-    if (btn.textContent == "Reset" || btn.textContent.toLocaleLowerCase == "reiniciar") {
-      resetearCalculadora();
+    if (btn.textContent == "Reset" ) {
+      resetearCalculadora();    
     }
+
   });
+});
+
+res.addEventListener("click", () => { 
+  resetearCalculadora();
+});
+
+del.addEventListener("click", () => {
+  display.textContent = '0';
 });
 
 function resetearCalculadora() {
