@@ -150,6 +150,7 @@ body {
   font-size: 45px;
   font-weight: 900;
   padding: 30px;
+  overflow-x: scroll;
   color: var(--color-t1);
   background: var(--bg-display-t1);
 }

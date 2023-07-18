@@ -79,7 +79,9 @@ function mostrarEnPantalla(valor) {
   if (display.textContent === "0") {
     display.textContent = "";
   }
+  if(display.textContent.length < 10){
   display.textContent += valor;
+  }
 }
 
 function calcularResultado(num1, operador) {
