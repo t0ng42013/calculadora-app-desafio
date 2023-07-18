@@ -20,11 +20,17 @@ https://calculadora-app-desafio.vercel.app
 Aquí hay algunas capturas de pantalla de mi calculadora:
 
 Captura de pantalla 1
+
 <img src="assets/design/desktop-design-theme-1.jpg">
+
 Captura de pantalla 2
+
 <img src="assets/design/desktop-design-theme-2.jpg">
+
 Captura de pantalla 3
+
 <img src="assets/design/mobile-design-theme-3.jpg">
+
 ## Tecnologías utilizadas
 
     HTML
@@ -33,7 +39,7 @@ Captura de pantalla 3
 
 ### Instalación
 
-    Clona este repositorio: git clone https://github.com/tu-usuario/calculadora.git
+    Clona este repositorio: git clone https://github.com/t0ng42013/calculadora-app-desafio
     Abre el archivo index.html en tu navegador.
 
 ### Cómo contribuir
